@@ -41,7 +41,7 @@ char **strtow(char *str, char *d)
 			return (NULL);
 		}
 		for (m = 0; m < k; m++)
-			s[zj][m] = str[m++];
+			s[zj][m] = str[n++];
 		s[zj][m] = 0;
 	}
 	s[zj] = NULL;
