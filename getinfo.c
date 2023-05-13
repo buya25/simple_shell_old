@@ -1,21 +1,21 @@
 #include "shell.h"
 
 /**
- * @info: struct address
  * clear_info - initializes info_t struct
+ * @info: struct address
  */
 void clear_info(info_t *info)
 {
-	info->path = NULL;
-        info->argc = 0;
 	info->arg = NULL;
 	info->argv = NULL;
+	info->path = NULL;
+	info->argc = 0;
 }
 
 /**
- * @av: argument vector
  * set_info - initializes info_t struct
  * @info: struct address
+ * @av: argument vector
  */
 void set_info(info_t *info, char **av)
 {

@@ -132,7 +132,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		k = len = 0;
 
 	d = read_buf(info, buf, &len);
-	if (d == -1 || (r == 0 && len == 0))
+	if (d == -1 || (d == 0 && len == 0))
 		return (-1);
 
 	c = _strchr(buf + bn, '\n');

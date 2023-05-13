@@ -47,8 +47,8 @@ extern char **environ;
 typedef struct liststr
 {
 	char *str;
-        struct liststr *next;
 	int num;
+	struct liststr *next;
 } list_t;
 
 /**
@@ -75,24 +75,25 @@ typedef struct liststr
  */
 typedef struct passinfo
 {
-	char **environ;
-        int env_changed;
-        int status;
 	char *arg;
 	char **argv;
 	char *path;
+	int argc;
+	unsigned int line_count;
+	int err_num;
 	int linecount_flag;
 	char *fname;
 	list_t *env;
 	list_t *history;
-	int argc;
-        unsigned int line_count;
-        int err_num;
 	list_t *alias;
+	char **environ;
+	int env_changed;
+	int status;
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
-	int histcount;
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
+	int readfd;
+	int histcount;
 } info_t;
 
 #define INFO_INIT \
