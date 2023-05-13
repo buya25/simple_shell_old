@@ -90,9 +90,9 @@ ssize_t get_input(info_t *info)
 }
 
 /**
+ * read_buf - reads a buffer
  * @buf: buffer
  * @info: parameter struct
- * read_buf - reads a buffer
  * @i: size
  *
  * Return: r
@@ -110,9 +110,9 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 }
 
 /**
+ * _getline - gets the next line of input from STDIN
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
- * _getline - gets the next line of input from STDIN
  * @info: parameter
  *
  * Return: s
@@ -120,10 +120,10 @@ ssize_t read_buf(info_t *info, char *buf, size_t *i)
 int _getline(info_t *info, char **ptr, size_t *length)
 {
 	size_t k;
-        ssize_t d = 0, s = 0;
-        char *p = NULL, *new_p = NULL, *c;
+	ssize_t d = 0, s = 0;
 	static char buf[READ_BUF_SIZE];
 	static size_t bn, len;
+	char *p = NULL, *new_p = NULL, *c;
 
 	p = *ptr;
 	if (p && length)

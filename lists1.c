@@ -28,7 +28,7 @@ char **list_to_strings(list_t *head)
 {
 	list_t *node = head;
 	char **sts;
-        char *str;
+	char *str;
 	size_t f = list_len(head), j;
 
 	if (!head || !f)
@@ -53,7 +53,6 @@ char **list_to_strings(list_t *head)
 	sts[f] = NULL;
 	return (sts);
 }
-
 
 /**
  * print_list - prints elements of list_t linked list
