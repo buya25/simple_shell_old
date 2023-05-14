@@ -54,7 +54,7 @@ char **strtow(char *str, char *d)
  * @d: the delimeter
  * Return: a pointer, or NULL on failure
  */
-char **strtow2(char d, char *str)
+char **strtow2(char *str, char d)
 {
 	int p, j, y, m, nmw = 0;
 	char **s;

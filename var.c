@@ -8,7 +8,7 @@
  *
  * Return: 1 if chain delimeter, 0 otherwise
  */
-int is_chain(info_t *info, size_t *p, char *buf)
+int is_chain(info_t *info, char *buf, size_t *p)
 {
 	size_t m = *p;
 
@@ -45,7 +45,7 @@ int is_chain(info_t *info, size_t *p, char *buf)
  *
  * Return: Void
  */
-void check_chain(info_t *info, size_t i, size_t *p, char *buf, size_t len)
+void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t jg = *p;
 
