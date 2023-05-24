@@ -106,6 +106,10 @@ return (builtin_ret);
 int find_builtin(info_t *info)
 
 {
+typedef struct builtin_table {
+char *type;
+int (*func)(info_t *);
+} builtin_table;
 
 int i, built_in_ret = -1;
 
