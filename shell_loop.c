@@ -42,12 +42,12 @@ free_info(info, 1);
 if (!interactive(info) && info->status)
 	exit(info->status);
 
-	if (builtin_ret == -2)
-	{
-		if (info->err_num == -1)
-			exit(info->status);
-		exit(info->err_num);
-	}
+if (builtin_ret == -2)
+{
+if (info->err_num == -1)
+exit(info->status);
+exit(info->err_num);
+}
 
 return (builtin_ret);
 }
@@ -69,7 +69,6 @@ int find_builtin(info_t *info)
 int i, built_in_ret = -1;
 
 builtin_table builtintbl[] = {
-
 {"exit", _myexit},
 {"env", _myenv},
 {"help", _myhelp},
@@ -79,16 +78,17 @@ builtin_table builtintbl[] = {
 {"cd", _mycd},
 {"alias", _myalias},
 {NULL, NULL}
-
 };
 
 
 for (i = 0; builtintbl[i].type; i++)
+{
 if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
 {
 info->line_count++;
 built_in_ret = builtintbl[i].func(info);
 break;
+}
 }
 
 return (built_in_ret);
